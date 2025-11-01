@@ -1,5 +1,11 @@
 # 🎮 Unity Demo: Editable PlayerPrefs with Live Playtime Display
 
+## 🧠 What Are PlayerPrefs?
+
+`PlayerPrefs` in Unity is a simple and convenient way to store and retrieve small amounts of data between game sessions. It’s commonly used for saving player settings, preferences, and lightweight game progress such as high scores, unlocked levels, or audio volume. Under the hood, `PlayerPrefs` stores data in the operating system’s registry or local files depending on the platform, making it persistent across game launches. It supports three basic data types: `string`, `int`, and `float`, and provides methods like `SetString`, `SetInt`, `SetFloat`, and their corresponding `Get` methods to access stored values.
+
+To use `PlayerPrefs`, developers typically call `PlayerPrefs.SetX` to save a value and `PlayerPrefs.GetX` to retrieve it. For example, saving a player's name would involve `PlayerPrefs.SetString("PlayerName", "Ernst")`, and retrieving it later would use `PlayerPrefs.GetString("PlayerName")`. These calls can be placed in scripts tied to UI buttons, game events, or scene transitions. Although `PlayerPrefs` is not suitable for large or sensitive data, it’s ideal for quick prototyping and storing non-critical information. Developers should always call `PlayerPrefs.Save()` to ensure data is written to disk, especially on platforms where automatic saving isn’t guaranteed.
+
 This Unity demo allows users to enter and save:
 - A string for player name
 - An integer for level
